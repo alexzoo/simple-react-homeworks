@@ -5,9 +5,15 @@
     background-color: #fff;
     border: 2px solid #8b8a8b;
     border-radius: 4px;
- /*   &:hover {*/
- /*    background-color: scale-color($btnColor, $lightness: -20%);*/
- /*}*/
+    transition: 220ms all ease-in-out;
+    &:hover {
+     background-color: scale-color(#8b8a8b, $lightness: -20%);
+ }
+    &:focus {
+        outline-style: solid;
+        outline-color: transparent;
+        box-shadow: 0 0 0 2px scale-color(#8b8a8b, $lightness: -40%);
+    }
 }
 
 

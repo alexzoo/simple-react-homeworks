@@ -1,5 +1,10 @@
 .checkbox {
-
+    display: inline-grid;
+    width: 1em;
+    height: 1em;
+    border-radius: 0.25em;
+    border: 0.1em solid currentColor;
+    color: #8b8a8b;
 }
 
 .spanClassName {

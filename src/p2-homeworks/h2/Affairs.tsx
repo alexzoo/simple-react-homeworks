@@ -2,6 +2,7 @@ import React from "react";
 import Affair from "./Affair";
 import {AffairType, FilterType} from "./HW2";
 import css from './Affairs.module.css'
+import SuperButton from "../h4/common/c2-SuperButton/SuperButton";
 
 
 type AffairsPropsType = { // need to fix any
@@ -28,10 +29,10 @@ function Affairs(props: AffairsPropsType) {
         <div className={css.rectangle}>
             <ol>{mappedAffairs}</ol>
 
-            <button className={css.btn} onClick={setAll}>All</button>
-            <button className={css.btn} onClick={setHigh}>High</button>
-            <button className={css.btn} onClick={setMiddle}>Middle</button>
-            <button className={css.btn} onClick={setLow}>Low</button>
+            <SuperButton className={css.btn} onClick={setAll}>All</SuperButton>
+            <SuperButton className={css.btn} onClick={setHigh}>High</SuperButton>
+            <SuperButton className={css.btn} onClick={setMiddle}>Middle</SuperButton>
+            <SuperButton className={css.btn} onClick={setLow}>Low</SuperButton>
         </div>
     );
 }

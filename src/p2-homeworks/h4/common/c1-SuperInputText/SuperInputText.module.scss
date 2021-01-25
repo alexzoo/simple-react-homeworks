@@ -1,0 +1,52 @@
+:root {
+    --input-border: #8b8a8b;
+    --input-focus-h: 245;
+    --input-focus-s: 100%;
+    --input-focus-l: 42%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.superInput {
+    font-size: 16px;
+    font-family: inherit;
+    padding: 0.25em 0.5em;
+    background-color: #fff;
+    border: 2px solid var(--input-border);
+    border-radius: 4px;
+    transition: 180ms box-shadow ease-in-out;
+    outline: 3px solid transparent;
+}
+
+.superInput:not(textarea) {
+    line-height: 1;
+    height: 2.25rem;
+}
+
+.superInput:focus {
+    border-color: hsl(
+                    var(--input-focus-h),
+                    var(--input-focus-s),
+                    var(--input-focus-l)
+    );
+    box-shadow: 0 0 0 3px
+    hsla(
+                    var(--input-focus-h),
+                    var(--input-focus-s),
+                    calc(var(--input-focus-l) + 40%),
+                    0.8
+    );
+}
+
+.errorInput {
+    font-size: 16px;
+    font-family: inherit;
+    padding: 0.25em 0.5em;
+    border-radius: 4px;
+    border: 3px solid #9097A2;
+    background: #D3D4DA;
+}
